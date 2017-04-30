@@ -1,0 +1,27 @@
+import io
+
+number z = 7
+
+function main accepts string args:
+	number z = 5
+	number x = 9
+	
+	z = x
+
+function anotherFunction:
+	number x = 6
+	number y = x
+	
+	z = y
+
+
+
+
+
+
+
+#-------------------------------------------------------------------------------------------------------------------
+number x = anotherFunction: void # function call to function which does not accept any parameters
+# another possible call syntax for a non-parameter accepting function:
+
+number x = anotherFunction: # mind the colon succeeding the functions name

@@ -1,0 +1,19 @@
+function print accepts string x:
+	_asm:
+		mov eax, sstrlb:x
+		mov ebx, sstrub:x
+		
+		mov ecx, eax
+		
+		loop_start:
+			
+			cmp ebx, ecx
+			jgt end_of_function
+			
+			mov eax, byte ptr [ebp - ecx]
+			invoke StdOut, eax
+			add ecx, 1 # increment by 1 byte
+			
+		jmp loop_start
+		
+		end_of_function:
